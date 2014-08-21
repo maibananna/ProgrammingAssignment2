@@ -1,6 +1,5 @@
 
-## makeCacheMatrix takes the input of the function and gets the inverse, m, 
-## and store the value of the inverse from cacheSolve
+## makeCacheMatrix takes the input of the function and passes on the value of the inverse to m
 
 makeCacheMatrix <- function(x = matrix()) {
 m <- NULL
@@ -9,7 +8,7 @@ m <- NULL
     m <<- NULL
   }
   get <- function() x
-  setinverse <- function(inverse) m <<- inverse
+  setinverse <- function(inverse) m <<- inverse      ##function(inverse) is called from cacheSolve
   getinverse <- function() m
   list(set = set, get = get,
        setinverse = setinverse,
